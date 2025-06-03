@@ -10,7 +10,7 @@ terraform {
 provider "random" {}
 
 resource "random_pet" "increase_resource_count" {
-  for_each = { for idx in range(1, 8) : idx => idx }
+  for_each = { for idx in range(1, 9) : idx => idx }
 
   prefix = "hello-world-${each.key}"
   length = 2
